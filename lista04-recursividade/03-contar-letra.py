@@ -7,12 +7,10 @@ def contarLetra(letra, palavra):
             return 0
     else:
         if letra == palavra[-1]:
-            return 1
+            return 1 + contarLetra(letra, palavra[0:-1])
         else:
-            return 0
-        return contarLetra(letra, palavra[0:-1]
+            return 0 + contarLetra(letra, palavra[0:-1])
 
-    return num
 
 if __name__ == "__main__":
     palavra = input("Palavra:")
